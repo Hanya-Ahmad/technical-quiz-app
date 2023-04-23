@@ -26,7 +26,7 @@ for (let i in questionsJson){
 let q=[];
 let stopIndex = 10;
 let correctAnswer;
-//Append 10 questions from the retrieved JSON object to the letiable 'q'
+//Append 10 questions from the retrieved JSON object to the variable 'q'
 
 for (let i = 0; i<stopIndex; i++){
     //If the question is not deleted from the previous steps, add it to 'q'
