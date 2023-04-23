@@ -44,6 +44,8 @@ for (let i = 0; i<stopIndex; i++){
         if(questionsJson[i]['correct_answers']['answer_d_correct']==='true'){
             correctAnswer = 4;
         }
+       
+        
         q.push({'question':questionsJson[i]['question'], 'correctAnswer':correctAnswer, 'answers':[questionsJson[i]['answers']['answer_a'],questionsJson[i]['answers']['answer_b'],questionsJson[i]['answers']['answer_c'],questionsJson[i]['answers']['answer_d']]   })
         }
     }
@@ -52,6 +54,7 @@ for (let i = 0; i<stopIndex; i++){
         stopIndex++;       
     }
 }
+console.log(questionsJson)
 
 //Timer functions
 $(function () {
@@ -169,6 +172,20 @@ $(function () {
                             $('#loadbar').fadeOut();
                         }, 1500);
                         //Update the UI with the question
+                        if(q[questionNo]['answers'][2] === null){
+                            document.getElementById('third-choice').style.visibility='hidden';
+                        }
+                        else{
+                            document.getElementById('third-choice').style.visibility='visible';
+                
+                        }
+                        if(q[questionNo]['answers'][3] === null){
+                            document.getElementById('fourth-choice').style.visibility='hidden';
+                        }
+                        else{
+                            document.getElementById('fourth-choice').style.visibility='visible';
+                
+                        }
                         $('#question').text(q[questionNo]['question']);
                         $($('#f-option').parent().find('label')).text(q[questionNo]['answers'][0]);
                         $($('#s-option').parent().find('label')).text(q[questionNo]['answers'][1]);
@@ -260,6 +277,20 @@ $(function () {
             $('#loadbar').fadeOut();
         }, 1000);
         $('#question').text(q[questionNo]['question']);
+        if(q[questionNo]['answers'][2] === null){
+            document.getElementById('third-choice').style.visibility='hidden';
+        }
+        else{
+            document.getElementById('third-choice').style.visibility='visible';
+
+        }
+        if(q[questionNo]['answers'][3] === null){
+            document.getElementById('fourth-choice').style.visibility='hidden';
+        }
+        else{
+            document.getElementById('fourth-choice').style.visibility='visible';
+
+        }
         $($('#f-option').parent().find('label')).text(q[questionNo]['answers'][0]);
         $($('#s-option').parent().find('label')).text(q[questionNo]['answers'][1]);
         $($('#t-option').parent().find('label')).text(q[questionNo]['answers'][2]);
@@ -345,7 +376,21 @@ $(document.body).on('click', "label.element-animation", function (e) {
                 $('#quiz').show();
                 $('#loadbar').fadeOut();
             }, 1000);
-
+            
+            if(q[questionNo]['answers'][2] === null){
+                document.getElementById('third-choice').style.visibility='hidden';
+            }
+            else{
+                document.getElementById('third-choice').style.visibility='visible';
+    
+            }
+            if(q[questionNo]['answers'][3] === null){
+                document.getElementById('fourth-choice').style.visibility='hidden';
+            }
+            else{
+                document.getElementById('fourth-choice').style.visibility='visible';
+    
+            }
             $('#question').text(q[questionNo]['question']);
             $($('#f-option').parent().find('label')).text(q[questionNo]['answers'][0]);
             $($('#s-option').parent().find('label')).text(q[questionNo]['answers'][1]);

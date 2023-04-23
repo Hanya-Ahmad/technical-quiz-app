@@ -578,23 +578,30 @@ pre code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto
+    
 }
 
 @media (min-width:576px) {
     .container {
-        max-width: 540px
+        max-width: 540px;
+        /* margin-top: 10% !important; */
+
     }
 }
 
 @media (min-width:768px) {
     .container {
-        max-width: 720px
+        max-width: 720px;
+        margin-top: 10% !important;
+
     }
 }
 
 @media (min-width:992px) {
     .container {
-        max-width: 960px
+        max-width: 960px;
+        margin-top: 10% !important;
+
     }
 }
 
@@ -616,37 +623,50 @@ pre code {
     margin-left: auto
 }
 
-@media (min-width:576px) {
+@media (min-width:365px) {
     .container,
     .container-sm {
-        max-width: 540px
+        max-width: 540px;
+        margin-top: 25%;
     }
 }
-
-@media (min-width:768px) {
+@media (min-width:530px) {
     .container,
     .container-md,
     .container-sm {
-        max-width: 720px
+        max-width: 604px;
+        margin-top: 40% !important;
+    }
+}
+@media (min-width:605px) {
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+        margin-top: 35% !important;
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:721px) {
     .container,
     .container-lg,
     .container-md,
     .container-sm {
-        max-width: 960px
+        max-width: 960px;
+        margin-top: 20% !important;
+        
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1050px) {
     .container,
     .container-lg,
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 1140px
+        max-width: 1140px;
+        margin-top: 10% !important;
+
     }
 }
 
