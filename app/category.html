@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Quiz App</title>
+
+	<!-- Bootstrap core CSS -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/category.css" rel="stylesheet">
+
+	<!-- animation stylesheet -->
+	<link href="css/categoryanimate.css" rel="stylesheet">
+
+	<!-- Fontawesome stylesheet -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body class="home-bg light-bg mb-5" style="overflow: hidden; ">
+
+
+	<!-- Category Content -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-auto col-centered animated wow jackInTheBox slow" data-toggle="modal" data-target="#subCateModal">
+				
+				<div  class="box-part text-center shadow">
+					<img src="images/linux.png" style="width:50px; height:50px;" class="img-fluid mx-auto d-block animated wow jello slow infinite" alt="...">
+					<div class="title mt-4">
+				<a class="category"  href="javascript:setTimeout(()=>{window.location = '/quiz' },700);">
+						<h4 id="Linux" >Linux</h4>
+				</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-auto col-centered animated wow jackInTheBox slow" data-toggle="modal" data-target="#subCateModal">
+
+				<div  class="box-part text-center shadow">
+					<img src="images/devopss.png" style="width:50px; height:50px;" class="img-fluid mx-auto d-block animated wow tada slow infinite" alt="...">
+					<div class="title mt-4">
+				<a class="category" href="javascript:setTimeout(()=>{window.location = '/quiz' },700);">
+
+						<h4 id ="DevOps">DevOps</h4>
+				</a>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="col-auto col-centered animated wow jackInTheBox slow" data-toggle="modal" data-target="#subCateModal">
+				
+				<div  class="box-part text-center shadow">
+					<img src="images/codeee.png"  style="width:50px; height:50px;" class="img-fluid mx-auto d-block animated wow rotateIn slower infinite" alt="...">
+					<div class="title mt-4">
+				<a class="category" href="javascript:setTimeout(()=>{window.location = '/quiz' },700);">
+
+						<h4 id="Code">Code</h4>
+				</a>
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="col-auto col-centered animated wow jackInTheBox slow" data-toggle="modal" data-target="#subCateModal">
+				
+					<div class="box-part text-center shadow">
+					<img src="images/docker1.png" style="width:50px; height:50px;" class="img-fluid mx-auto d-block animated wow rotateIn slow infinite" alt="...">
+					<div class="title text-center mt-4">
+				<a  class="category" href="javascript:setTimeout(()=>{window.location = '/quiz' },700);">
+
+						<h4 id="Docker">Docker</h4>
+				</a>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-auto col-centered animated wow jackInTheBox slow" data-toggle="modal" data-target="#subCateModal">
+				
+				<div  class="box-part text-center shadow">
+					<img src="images/sql.png" style="width:50px; height:50px;"class="img-fluid mx-auto d-block animated wow jello slower infinite" alt="...">
+					<div class="title text-center mt-4">
+				<a class="category" href="javascript:setTimeout(()=>{window.location = '/quiz' },700);">
+
+						<h4 id="SQL">SQL</h4>
+				</a>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-auto col-centered animated wow jackInTheBox slow" data-toggle="modal" data-target="#subCateModal">
+				
+				<div  class="box-part text-center shadow">
+					<img src="images/cms3.png"  style="width:50px; height:50px;" class="img-fluid mx-auto d-block animated wow rotateIn slower infinite" alt="...">
+					<div class="title text-center mt-4">
+				<a class="category" href="javascript:setTimeout(()=>{window.location = '/quiz' },700);">
+
+						<h4 id="CMS">CMS</h4>
+				</a>
+
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/category.js"></script>
+<!-- single selectable category -->
+<script type="text/javascript">
+	$('input[type="checkbox"]').on('change', function() {
+		$('input[type="checkbox"]').not(this).prop('checked', false);
+	});
+</script>
+<!-- 
+right click off -->
+<script type="text/javascript">
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+</body>
+
+</html>

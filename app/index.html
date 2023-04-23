@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Quiz App</title>
+	<link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- animation stylesheet -->
+    <link href="css/quizanimate.css" rel="stylesheet">
+
+    <!-- Fontawesome stylesheet -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body class="home-bg mb-3" style="overflow: hidden;">
+    <!-- Page Content -->
+
+    <div class="container-fluid mt-5 mb-5" style="margin-top: 10rem !important">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                <h1 class="color-blue mt-5 animated wow fadeInDown delay-0-1s">Quiz App</h1>
+                <br>
+                <p class="animated wow fadeInDown delay-0-2s">
+                    A technical quiz built using Quiz API. Each quiz has 10 questions where you'll have 20 seconds for each question.
+                </p>
+                <br>
+
+                <a href="/category"><button class="gradientBtn animated wow fadeInUp delay-0-3s">Play Quiz</button></a>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                <img src="images/right-img.png" class="img-fluid animated wow pulse slow infinite" />
+            </div>
+        </div>
+        <div class="float-left ml-5">
+            <img src="images/bottom-img.png" class="img-fluid animated wow swing slower infinite" />
+        </div>
+    </div>
+
+  
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/quiz.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Left Side Bar -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.cssText = "width:270px; border-right: 10px solid #fff; box-shadow: 1px 8px 8px 8px rgba(73,21,155,0.3); -webkit-box-shadow: 1px 8px 8px 8px rgba(73,21,155,0.3);  -moz-box-shadow: 1px 8px 8px 8px rgba(73,21,155,0.3);";
+            var element = document.getElementById("mySidenav");
+            element.classList.add("animated wow bounceInLeft slow");
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.cssText = "width:0; border:none; box-shadow: none;";
+        }
+    </script>
+
+    <!-- For Login -->
+    <script type="text/javascript">
+        $('#loginModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+
+    <!-- For SignUp -->
+    <script type="text/javascript">
+        $('#signUpModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+    <!-- 
+right click off -->
+    <script type="text/javascript">
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+</body>
+
+</html>

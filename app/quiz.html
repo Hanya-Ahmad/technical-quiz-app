@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Quiz App </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/quiz.css" rel="stylesheet">
+
+  <!-- animation stylesheet -->
+  <link href="css/quizanimate.css" rel="stylesheet">
+
+  <!-- Fontawesome stylesheet -->
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body class="light-bg" style="overflow: hidden;">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+  	<div class="container">
+  		<a href="/category" class="h1"><i class="fa fa-angle-left color-dark"></i></a>
+  	</div>
+  </nav>
+
+  <!-- Page Content -->
+
+  <div class="container">
+    <div class="row"><br><br>
+      <div class="col-sm-12 col-sm-offset-2" id="quiz_web">
+        <div class="progress mb-2">
+          <div class="progress-bar bg-blue" role="progressbar" style="width: 1%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <!--  timer  --> 
+        <center ><div id="app" class="animated wow pulse"></div></center>
+        <center>
+          <div class="loader">
+            <div class="spinner-border mt-5" role="status" id="loadbar" style="display: none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </center>
+        <div id="quiz" class="quiz">
+          <div class="question mb-3 animated wow zoomIn">
+            <h3><span class="label label-warning" id="qid"></span>
+              <span id="question"> </span>
+            </h3>
+          </div>
+          <ul class="row">
+            <li class="animated wow fadeInUp delay-0-1s">
+              <input type="radio" id="f-option" name="selector" value="1">
+              <label for="f-option" class="align-middle  element-animation">Cricket</label>
+              <div class="check"></div>
+            </li>
+            <li class="animated wow fadeInUp delay-0-2s">
+              <input type="radio" id="s-option" name="selector" value="2">
+              <label for="s-option" class="element-animation">Hockey</label>
+              <div class="check"><div class="inside"></div></div>
+            </li>
+            <li class="animated wow fadeInUp delay-0-3s">
+              <input type="radio" id="t-option" name="selector" value="3">
+              <label for="t-option" class="element-animation">Football</label>
+              <div class="check"><div class="inside"></div></div>
+            </li>
+            <li class="animated wow fadeInUp delay-0-4s">
+              <input type="radio" id="x-option" name="selector" value="4">
+              <label for="x-option" class="element-animation">Kabaddi</label>
+              <div class="check"><div class="inside"></div></div>
+            </li>
+          </ul>
+          <!-- <div style="display:flex; justify-content: end; margin-top: 5%;">
+            <button class="gradientBtn animated wow fadeInUp delay-0-3s" type="submit" id="next-question">Next</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- result modal -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="modal fade mt-5 hide" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog mt-5" role="document">
+            <div class="modal-content rounded-modal shadow" style="margin-top: 4rem;">
+              <center>
+                <span class="loginSquare mt-n5"><p class="text-white line-height-20 text-center ml-n2 mt-2" id="exampleModalLabel"><b>Excellent</b></p></span>
+              </center>
+              <!-- dotted fireworks -->
+              <div class="pyro">
+                <div class="before"></div>
+                <div class="after"></div>
+              </div>
+              <div class="modal-header border-0 p-0">
+                <a href="/category"><button type="button" class="close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                </a>
+              </div>
+              <div class="modal-body">
+                <div class="mb-4"><center>
+                  <img src="images/star.png" class="img-fluid mt-4 animated wow bounce delay-0-2s" />
+                  <img src="images/star.png" class="img-fluid animated wow bounce delay-0-3s" />
+                  <img src="images/star.png" class="img-fluid mt-4 animated wow bounce delay-0-4s" /></center>
+                </div>
+                <p class="color-light text-center mb-4">.......................................................</p>
+                <h4 class="color-dark mb-5 mt-3 text-center animated wow zoomIn delay-0-5s">Your Score: <span id ="totalCorrect" class=""><b></b></span></h4>
+                <center>
+                  <a href="/quiz"><button id="remove-mr" type="button" class="gradientBtn mr-5 mb-3 animated wow fadeInUp">Replay</button></a>
+                  <a href="/"><button type="button" class="gradientBtn animated wow fadeInUp">Home</button></a>
+                <center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+  <!-- jQuery Ripples JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+  <!-- Quiz JavaScript -->
+  <script src="js/quiz.js"></script>
+  <!-- 
+right click off -->
+<script type="text/javascript">
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+</body>
+
+</html>
